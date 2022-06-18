@@ -17,12 +17,8 @@
   (cdr point))
 
 (define (midpoint-segment seg)
-  (make-point (/ (+ (x-point (start-segment seg))
-                    (x-point (end-segment   seg)))
-                 2)
-              (/ (+ (y-point (start-segment seg))
-                    (y-point (end-segment   seg)))
-                 2)))
+  (make-point (/ (+ (x-point (start-segment seg)) (x-point (end-segment seg))) 2)
+              (/ (+ (y-point (start-segment seg)) (y-point (end-segment seg))) 2)))
 
 (define (print-point p)
   (newline)

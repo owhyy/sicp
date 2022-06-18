@@ -7,14 +7,16 @@
 
 (define (car z)
   (define (iter z res)
-    (cond ((zero? z) res)
-          ((zero? (remainder z 2)) (iter (/ z 2) (+ res 1)))
-          (else res)))
+    (cond
+      [(zero? z) res]
+      [(zero? (remainder z 2)) (iter (/ z 2) (+ res 1))]
+      [else res]))
   (iter z 0))
 
 (define (cdr z)
   (define (iter z res)
-    (cond ((zero? z) res)
-          ((zero? (remainder z 3)) (iter (/ z 3) (+ res 1)))
-          (else res)))
+    (cond
+      [(zero? z) res]
+      [(zero? (remainder z 3)) (iter (/ z 3) (+ res 1))]
+      [else res]))
   (iter z 0))
