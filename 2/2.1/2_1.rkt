@@ -10,3 +10,5 @@
     (if (or (and (> n 0) (> d 0)) (and (< n 0) (< d 0)))
         (cons (abs (/ n g)) (abs (/ d g)))
         (if (< n 0) (cons (/ n g) (abs (/ d g))) (cons (/ (- n) g) (abs (/ d g)))))))
+
+(provide (all-defined-out))
